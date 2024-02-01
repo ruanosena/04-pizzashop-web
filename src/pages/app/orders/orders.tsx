@@ -22,7 +22,7 @@ export function Orders() {
   const pageIndex = z.coerce
     .number()
     .transform((page) => page - 1)
-    .parse(searchParams.get('page') ?? '0')
+    .parse(searchParams.get('page') ?? '1')
 
   const { data: result } = useQuery({
     queryKey: ['orders', pageIndex],
